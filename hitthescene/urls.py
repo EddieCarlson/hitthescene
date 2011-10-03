@@ -9,6 +9,7 @@ urlpatterns = patterns('',
 
     # (r'^hitthescene/', include('hitthescene.foo.urls')),
     (r'^$', 'hitthescene.scene.views.index'),
+    (r'^events/$', 'hitthescene.scene.views.eventlist'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

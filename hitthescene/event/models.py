@@ -5,6 +5,6 @@ from venue.models import Venue
 class Event(models.Model):
 	name = models.CharField(max_length=80)
 	date = models.DateTimeField()
-	artist = models.ForeignKey(Artist)
-	venue = models.ForeignKey(Venue)
+	artists = models.ManyToManyField(Artist, null=True)
+	venue = models.ForeignKey(Venue, null=True)
 	
