@@ -3,14 +3,14 @@
 {%block inbody%}
     <h1> Events: </h1>
     {% for e in events %}
-        <div style="border:solid:">
-            <h2>{{e.name}}</h2> <br/>
-            Date: {{e.date}}<br/>
-            Artists:
+        <div style="border-style:solid;">
+            <h2 style="margin-top:0px;">{{e.name}}</h2>
+            <b>Date:</b> {{e.date}}<br/>
+            <b>Artists:</b>
             {% for a in e.artists.all %}
                 {{a.name}} 
-            {% endfor %}
-            {{e.venue.name}}<br/>
+            {% endfor %}<br/>
+            <b>Venue:</b> {{e.venue.name}}<br/>
         </div>
     {% endfor %}
 {%endblock%}
